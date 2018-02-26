@@ -21,11 +21,11 @@ Create a function called myRequest that has similar set of features to the Node 
 
 The request module simply creates a wrapper around the Node core http module. Your task it to create your own request function that performs in the same way as the request module used in the app.js file in this repo. Hint: relate to your knowledge of streams and sending data in chunks.
 
-To complete this challenge you will need to use the [`http.get`](https://nodejs.org/api/http.html#http_http_get_options_callback) method of the node core `http` module. 
+To complete this challenge you will need to use the [`http.get`](https://nodejs.org/api/http.html#http_http_get_options_callback) method of the node core `http` module.
 
 ### Start here!
 1) Clone this repo & run `npm install`
-2) Run the app.js file in your command line with the command `node app.js`
+2) Run the app.js file in your command line with the command `node app.js`. This is the response from the request module that you're trying to recreate with your myRequest function. There is no need to change the helper function code.
 3) Open app.js and follow the instructions to create your own request function
 
 ### Bonus round
