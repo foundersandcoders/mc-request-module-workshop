@@ -12,7 +12,7 @@ const myRequest = () => {
   */
 }
 
-// Helper
+// Helper function - do not change this code!
 const testRequest = (module) => {
   module('http://jsonplaceholder.typicode.com/users/1', function (error, response, body) {
     console.log('error:', error);
