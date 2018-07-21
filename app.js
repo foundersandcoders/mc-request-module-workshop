@@ -1,5 +1,6 @@
 "use strict";
 
+// This is the npm Request module that you are trying to emulated with `myRequest` below:
 const request = require('request');
 
 const myRequest = () => {
@@ -12,7 +13,7 @@ const myRequest = () => {
   */
 }
 
-// Helper function - do not change this code!
+// Helper function - do not change this code! This is the test to check your myRequest function works the same as the Request npm module. 
 const testRequest = (module) => {
   module('http://jsonplaceholder.typicode.com/users/1', function (error, response, body) {
     console.log('error:', error);
@@ -21,8 +22,8 @@ const testRequest = (module) => {
   });
 };
 
-// request module test
+// Request module test
 testRequest(request);
 
-// // myRequest module test
+// myRequest module test
 testRequest(myRequest);
