@@ -43,4 +43,4 @@ There are two test sets in `app.test.js` (the second is commented out). The firs
 The second, commented-out test will check your function works with https requests (bonus round, see below...). Uncomment it when you're ready to test in the bonus round!
 
 ### Bonus round
-You can alter your myRequest function to check which protocol the url is using (http or https) and make the suitable request. You will need to require in the `https` Node core module. You can test this by uncommenting the second test in `app.test.js`.
+You can alter your `myRequest` function to check which protocol the url is using (http or https) and use the appropriate Node core module. You will need to require in `https`. You can test this by uncommenting the second test in `app.test.js`.
