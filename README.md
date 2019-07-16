@@ -20,7 +20,7 @@ Create a function called `myRequest` which makes a request to an API url using a
 
 It should take two arguments: the url to make the request to, and a callback function.
 
-The callback function will have two arguments:
+The callback function should take two arguments:
 
   1. error (String: if an error occurred)
   2. response (Object: includes the body & statusCode of the request)
