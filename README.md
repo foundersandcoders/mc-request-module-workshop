@@ -22,7 +22,7 @@ It should take two arguments: the url to make the request to, and a callback fun
 
 The callback function should take two arguments:
 
-  1. error (String: if an error occurred)
+  1. error (null if no error occurred; an error object if an error occurred)
   2. response (Object: includes the body & statusCode of the request)
 
 **Hint**: relate to your knowledge of streams and sending data in chunks.
