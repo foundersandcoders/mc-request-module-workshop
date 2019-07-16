@@ -1,4 +1,4 @@
-# Morning challenge - Build the Request module
+# Morning challenge - Build a request module
 This week in your project you will be making API calls from the backend. In the past few weeks you have been making API calls from the frontend with the XMLHttpRequest object and methods. Now that you are in the backend we would like you to learn how to make similar requests using the Node core [http module](https://nodejs.org/api/http.html). This workshop is intended to familiarise you with how backend requests are made, and practice using callbacks.
 
 ### Time Required: 1 hour
