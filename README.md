@@ -31,7 +31,7 @@ To complete this challenge you will need to use the [`http.get`](https://nodejs.
 
 ### Start here!
 1) Clone this repo & run `npm install`
-2) Run `npm test` in your command line to start the test watcher. The tests should fail as your function doesn't exist yet
+2) Run `npm test` in your command line to start the test watcher. The tests should fail as your function doesn't do anything yet
 3) Open `app.js` and write your function!
 
 ### Tests
