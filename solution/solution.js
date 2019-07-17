@@ -20,3 +20,13 @@ const myRequest = (url, cb) => {
 };
 
 module.exports = myRequest;
+
+const consoleLoggingCallback = (error, response) => {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log({ body: response.body, statusCode: response.statusCode });
+  }
+};
+
+myRequest("https://pokeapi.co/api/v2/pokemon/squirtle", consoleLoggingCallback);

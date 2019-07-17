@@ -38,4 +38,25 @@ There are two test sets in `app.test.js` (the second is commented out). The firs
 The second, commented-out test will check your function works with https requests (bonus round, see below...). Uncomment it when you're ready to test in the bonus round!
 
 ### Bonus round
-You can alter your `myRequest` function to check which protocol the url is using (http or https) and use the appropriate Node core module. You will need to require in `https`. You can test this by uncommenting the second test in `app.test.js`.
+Most modern APIs will use https protocol.
+Try using your function with this url (http://jsonplaceholder.typicode.com/users/1) and console logging in the callback function.
+<details>
+<summary>Example</summary>
+
+``` javascript
+const consoleLoggingCallback = (error, response) => {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log({ body: response.body, statusCode: response.statusCode });
+  }
+};
+
+myRequest("http://jsonplaceholder.typicode.com/users/1", consoleLoggingCallback);
+```
+
+</details>
+
+If you try again using the Pokemon API (https://pokeapi.co/api/v2/pokemon/squirtle), you'll see that using an API url which starts with `https` will error.
+
+Alter your `myRequest` function to check which protocol the url is using (http or https) and use the appropriate Node core module. You will need to require `https`. You can test this by uncommenting the second test in `app.test.js`.
