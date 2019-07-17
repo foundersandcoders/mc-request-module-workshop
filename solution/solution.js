@@ -2,8 +2,8 @@ const http = require("http");
 const https = require("https");
 
 const myRequest = (url, cb) => {
-  const urlObj = new URL(url);
-  const protocol = urlObj.protocol === "https:" ? https : http;
+  // the line below is extra - the solution to the bonus section
+  const protocol = url.includes("https") ? https : http;
   protocol
     .get(url, response => {
       let data = "";
