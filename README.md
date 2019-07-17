@@ -5,9 +5,9 @@ This week in your project you will be making API calls from the backend. In the 
 To become familiar with making API calls from the backend using the Node core [http module](https://nodejs.org/api/http.html).
 
 ### When would I need to make an API call from the backend?
-Example 1 - I would like to make a HTTP request to the [GitHub API](https://developer.github.com/v3/) to get my profile photo URL.
+Example 1 - I want to avoid Cross Origin Resource Sharing [(CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) - you may have come across this in API week
 
-Example 2 - I would like to make a HTTP request to the [TFL API](https://api.tfl.gov.uk/), to find out which buses go between London Bridge and Finsbury Park.
+Example 2 - I would like to make a request to an API that requires an API key to use - I want to keep this key secret so I can't make a request from the frontend
 
 ### The challenge
 
