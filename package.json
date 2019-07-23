@@ -2,9 +2,10 @@
   "name": "tests",
   "version": "1.0.0",
   "description": "Request module workshop",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
-    "test": "nodemon app.test.js | tap-spec"
+    "test": "nodemon app.test.js | tap-spec",
+    "solution-test": "nodemon solution/solution.test.js | tap-spec"
   },
   "author": "",
   "license": "ISC",
