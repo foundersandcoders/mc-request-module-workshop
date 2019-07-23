@@ -19,6 +19,11 @@ The callback function should take two arguments:
 
   1. error (null if no error occurred; an error object if an error occurred)
   2. response (Object: includes the body & statusCode of the request)
+      <details>
+      <summary>Click if you're stuck</summary>
+
+      **Hint**:  One way to do this is to pass on the response object from the API directly, or you may want to construct this object yourself.
+      </details>
 
 **Hint**: relate to your knowledge of streams and sending data in chunks.
 
