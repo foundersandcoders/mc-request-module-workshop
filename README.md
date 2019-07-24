@@ -34,14 +34,6 @@ To complete this challenge you will need to use the [`http.get`](https://nodejs.
 2) Run `npm test` in your command line to start the test watcher. The tests should fail as your function doesn't do anything yet
 3) Open `app.js` and write your function!
 
-### Tests
-There are two test sets in `app.test.js` (the second is commented out). The first test will run three assertions: 
-1) Checks there are no errors
-2) Checks that the API response passed to the callback has a status code of 200
-3) Checks that the API response passed to the callback has the correct json
-
-The second, commented-out test will check your function works with https requests (bonus round, see below...). Uncomment it when you're ready to test in the bonus round!
-
 ### Bonus round
 Most modern APIs will use https protocol.
 Try using your function with this url (http://jsonplaceholder.typicode.com/users/1) and console logging in the callback function.
