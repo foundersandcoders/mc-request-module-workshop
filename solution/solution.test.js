@@ -1,7 +1,10 @@
 const test = require("tape");
 const nock = require("nock");
-const myRequest = require("./solution");
-const bonusRequest = require("./bonus.solution");
+const {
+  myRequest
+  // uncomment the line below to test bonus solution
+  // ,myBonusRequest
+} = require("./solution");
 
 test("myRequest fetches data correctly", t => {
   nock("http://jsonplaceholder.typicode.com")
@@ -28,27 +31,29 @@ test("myRequest fetches data correctly", t => {
   );
 });
 
-test("bonusRequest fetches data if API uses https", t => {
-  nock("https://jsonplaceholder.typicode.com")
-    .get("/users/1")
-    .reply(200, {
-      name: "Leanne Graham"
-    });
-  bonusRequest(
-    "https://jsonplaceholder.typicode.com/users/1",
-    (error, response) => {
-      t.error(error, "no https supported");
-      t.equal(
-        response.statusCode,
-        200,
-        "the API should respond with a status code of 200"
-      );
-      t.deepEqual(
-        response.body.name,
-        "Leanne Graham",
-        "the response body should contain the correct json"
-      );
-      t.end();
-    }
-  );
-});
+if (typeof myBonusRequest !== "undefined") {
+  test("myBonusRequest fetches data if API uses https", t => {
+    nock("https://jsonplaceholder.typicode.com")
+      .get("/users/1")
+      .reply(200, {
+        name: "Leanne Graham"
+      });
+    myBonusRequest(
+      "https://jsonplaceholder.typicode.com/users/1",
+      (error, response) => {
+        t.error(error, "no https supported");
+        t.equal(
+          response.statusCode,
+          200,
+          "the API should respond with a status code of 200"
+        );
+        t.deepEqual(
+          response.body.name,
+          "Leanne Graham",
+          "the response body should contain the correct json"
+        );
+        t.end();
+      }
+    );
+  });
+}
