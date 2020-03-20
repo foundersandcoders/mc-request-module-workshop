@@ -2,17 +2,17 @@
 
 This week in your project you will be making API calls from the backend. In the past few weeks you have been making API calls from the frontend with the `fetch` method. Now that you are in the backend we would like you to learn how to make similar requests using the Node core [http module](https://nodejs.org/api/http.html). This workshop is intended to familiarise you with how backend requests are made, and practice creating your own promises.
 
-### Learning outcome
+## Learning outcome
 
 To become familiar with making API calls from the backend using the Node core [http module](https://nodejs.org/api/http.html).
 
-### When would I need to make an API call from the backend?
+## When would I need to make an API call from the backend?
 
 Example 1 - I want to avoid Cross Origin Resource Sharing [(CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) - you may have come across this in API week
 
 Example 2 - I would like to make a request to an API that requires an API key to use - I want to keep this key secret so I can't make a request from the frontend
 
-### The challenge
+## The challenge
 
 Create a function called `myRequest` which makes a request to an API url using an HTTP GET request.
 
@@ -40,13 +40,13 @@ const myPromise = new Promise((resolve, reject) => {
 
 To complete this challenge you will need to use the [`http.get`](https://nodejs.org/api/http.html#http_http_get_options_callback) method of the node core `http` module.
 
-### Start here!
+## Start here!
 
 1. Clone this repo & run `npm install`
 2. Run `npm test` in your command line to start the test watcher. The tests should fail as your function doesn't do anything yet
 3. Open `app.js` and write your function!
 
-### Bonus round
+## Bonus round
 
 Most modern APIs will use the `https` protocol.
 Try using your function with this url (`http://jsonplaceholder.typicode.com/users/1`).
