@@ -6,7 +6,7 @@ test("myRequest fetches data correctly", t => {
   nock("http://jsonplaceholder.typicode.com")
     .get("/users/1")
     .reply(200, {
-      name: "Leanne Graham"
+      name: "Leanne Graham",
     });
   myRequest(
     "http://jsonplaceholder.typicode.com/users/1",

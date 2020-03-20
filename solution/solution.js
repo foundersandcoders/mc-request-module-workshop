@@ -40,7 +40,7 @@ const myRequest = (url, cb) => {
 // };
 
 module.exports = {
-  myRequest
+  myRequest,
   // uncomment line below to export bonus solution
   // ,myBonusRequest
 };
