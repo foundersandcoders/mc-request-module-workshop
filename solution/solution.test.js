@@ -1,9 +1,11 @@
-const test = require("tape");
+const tape = require("tape");
 const nock = require("nock");
+const _test = require("tape-promise").default;
+const test = _test(tape); // add promise support to tape
 const {
   myRequest,
   // uncomment the line below to test bonus solution
-  // ,myBonusRequest
+  // myBonusRequest,
 } = require("./solution");
 
 test("myRequest fetches data correctly", t => {
@@ -12,10 +14,9 @@ test("myRequest fetches data correctly", t => {
     .reply(200, {
       name: "Leanne Graham",
     });
-  myRequest(
-    "http://jsonplaceholder.typicode.com/users/1",
-    (error, response) => {
-      t.error(error);
+
+  return myRequest("http://jsonplaceholder.typicode.com/users/1").then(
+    response => {
       t.equal(
         response.statusCode,
         200,
@@ -31,6 +32,10 @@ test("myRequest fetches data correctly", t => {
   );
 });
 
+test("myRequest rejects bad requests", t => {
+  return t.rejects(myRequest("abc"), "promise should reject on error");
+});
+
 if (typeof myBonusRequest !== "undefined") {
   test("myBonusRequest fetches data if API uses https", t => {
     nock("https://jsonplaceholder.typicode.com")
@@ -38,10 +43,9 @@ if (typeof myBonusRequest !== "undefined") {
       .reply(200, {
         name: "Leanne Graham",
       });
-    myBonusRequest(
-      "https://jsonplaceholder.typicode.com/users/1",
-      (error, response) => {
-        t.error(error, "no https supported");
+
+    return myRequest("https://jsonplaceholder.typicode.com/users/1").then(
+      response => {
         t.equal(
           response.statusCode,
           200,
