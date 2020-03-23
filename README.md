@@ -16,7 +16,7 @@ Example 2 - I would like to make a request to an API that requires an API key to
 
 Create a function called `myRequest` which makes a request to an API url using an HTTP GET request.
 
-It should take one argument: the url to make the request to, return a promise.
+It should take one argument: the url to make the request to. It should return a promise.
 
 If the request is successful the promise should resolve with an object containing two properties:
 
