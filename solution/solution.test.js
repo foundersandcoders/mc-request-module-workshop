@@ -38,13 +38,13 @@ test("myRequest rejects bad requests", t => {
 
 if (typeof myBonusRequest !== "undefined") {
   test("myBonusRequest fetches data if API uses https", t => {
-    nock("http://jsonplaceholder.typicode.com")
+    nock("https://jsonplaceholder.typicode.com")
       .get("/users/1")
       .reply(200, {
         name: "Leanne Graham",
       });
 
-    return myRequest("http://jsonplaceholder.typicode.com/users/1").then(
+    return myRequest("https://jsonplaceholder.typicode.com/users/1").then(
       response => {
         t.equal(
           response.statusCode,
